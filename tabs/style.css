@@ -373,7 +373,7 @@ footer {
 
 form {
     position: absolute;
-    top: 5px;
+    top: 20px;
     background-color: #1d1e2b;
     padding: 15px;
     display: flex;
@@ -381,7 +381,7 @@ form {
     right: 1vw;
     width: 18vw;
     z-index: -10;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
