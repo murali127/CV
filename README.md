@@ -19,7 +19,3 @@ You can explore my portfolio and learn more about my expertise and projects by c
 I am passionate about creating innovative solutions using modern web technologies. I believe in building responsive, user-friendly websites that deliver excellent performance across devices. 
 
 Thank you for taking the time to view my portfolio. Feel free to get in touch if you have any questions or would like to collaborate.
-
----
-
-Let me know if you'd like further tweaks!
