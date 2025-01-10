@@ -8,7 +8,7 @@ Welcome to the official portfolio of **Murali Paila**. This website showcases my
 
 You can explore my portfolio and learn more about my expertise and projects by clicking the link below:
 
-[View My Portfolio](https://murali127.github.io/li-s_cv/)
+[View My Portfolio](https://murali127.github.io/CV/)
 
 ### Technologies Used:
 - **HTML**: Structuring the web pages
