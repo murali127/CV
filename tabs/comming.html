@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #ffffff;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .background div {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: float 10s infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-100px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .countdown div {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .countdown div span {
+      display: block;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .countdown div label {
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <!-- Floating bubbles -->
+    <div style="top: 10%; left: 15%; animation-duration: 7s;"></div>
+    <div style="top: 20%; left: 70%; animation-duration: 9s;"></div>
+    <div style="top: 40%; left: 30%; animation-duration: 8s;"></div>
+    <div style="top: 50%; left: 80%; animation-duration: 6s;"></div>
+    <div style="top: 70%; left: 40%; animation-duration: 10s;"></div>
+  </div>
+  <div>
+    <h1>We're Coming Soon!</h1>
+    <p>Our website is under construction. Stay tuned for something amazing!</p>
+    <div class="countdown">
+      <div>
+        <span id="days">00</span>
+        <label>Days</label>
+      </div>
+      <div>
+        <span id="hours">00</span>
+        <label>Hours</label>
+      </div>
+      <div>
+        <span id="minutes">00</span>
+        <label>Minutes</label>
+      </div>
+      <div>
+        <span id="seconds">00</span>
+        <label>Seconds</label>
+      </div>
+    </div>
+  </div>
+  <footer>© 2025 All Rights Reserved</footer>
+  <script>
+    // Countdown Timer
+    const targetDate = new Date("2025-02-01T00:00:00").getTime();
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+    };
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
