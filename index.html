@@ -368,14 +368,16 @@ My focus is on improving my skills and delivering edits that bring out the best 
         <div class="l2 letter"></div>
     </div>
     <footer>
-        <form name="Murali Portfolio Contact" action="POST" data-netlify="true">
+        <form name="Gunjesh Portfolio Contact" method="POST" data-netlify="true" id="contactForm">
+            <input type="hidden" name="form-name" value="Murali Portfolio Contact">
             <div class="contact"><b>Let's Connect!</b></div>
             <br>
-            <input type="text" name="Name" placeholder="&nbsp;&nbsp;Your Name">
-            <input type="email" name="Email" placeholder="&nbsp;&nbsp;Your E-mail ID">
-            <input type="text" name="Message" placeholder="&nbsp;&nbsp;Your Message">
+            <input type="text" name="Name" placeholder="&nbsp;&nbsp;Your Name" required>
+            <input type="email" name="Email" placeholder="&nbsp;&nbsp;Your E-mail ID" required>
+            <input type="text" name="Message" placeholder="&nbsp;&nbsp;Your Message" required>
             <button type="submit" class="send">Send!</button>
         </form>
+        <div id="formMessage" style="display:none;">Message sent successfully!</div>
         <div class="icons">
             <a href="https://github.com/multiverseweb"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                     class="social" id="github"></a>
